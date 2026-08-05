@@ -1,0 +1,20 @@
+// Prisma schema for Listify.
+// The datasource URL lives in prisma.config.ts, which reads DATABASE_URL
+// from .env — see .env.example.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+/// Simple key/value store for application-level settings.
+/// Present so the persistence layer is wired end to end from the first
+/// migration; feature models arrive with the features that need them.
+model AppSetting {
+  key   String @id
+  value String
+}
