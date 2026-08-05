@@ -5,3 +5,8 @@
 .env
 .env.*
 !.env.example
+
+# Local SQLite database
+*.db
+*.db-journal
+prisma/dev.db*
