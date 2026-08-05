@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  placeholder:
+    name: placeholder
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Placeholder only. Listify has no application code yet, so there is
+      # nothing to lint, build, or test. This job exists so the repository has
+      # one required status check, which Finn-loop's reviewer needs before it
+      # will consider a PR approvable.
+      #
+      # Replace this step with the real lint / typecheck / build / test
+      # commands as soon as the project has code. A green run here currently
+      # proves nothing about correctness.
+      - name: Placeholder check
+        run: echo "No project code yet - placeholder check passed."

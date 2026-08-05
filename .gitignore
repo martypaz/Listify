@@ -1,2 +1,7 @@
 # Claude Code local, per-machine state
 .claude/settings.local.json
+
+# Local secrets - never commit. Only .env.example is tracked.
+.env
+.env.*
+!.env.example
